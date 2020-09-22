@@ -8,15 +8,25 @@ const NameList = () => {
     
     return (
         <ListGroup className="mt-4">
-            {names.map(name => (
-                            <ListGroupItem  key={name.id} className="d-flex"> 
-                            <strong>{name.name}</strong>
-                            <div className="ml-auto">
-                                <Link className="btn btn-warning mr-1" to={`/edit/${name.id}`}>Edit</Link>
-                                <Button onClick={() => removeName(name.id)} color ="danger" type="submit"> Delete</Button>
-                            </div>
-                        </ListGroupItem>
-            ))}
+            {names.length > 0 ? (
+                <>
+                    {names.map(name => (
+                                    <ListGroupItem  key={name.id} className="d-flex"> 
+                                    <strong>{name.name}</strong>
+                                    <div className="ml-auto">
+                                        <Link className="btn btn-warning mr-1" to={`/edit/${name.id}`}>Edit</Link>
+                                        <Button onClick={() => removeName(name.id)} color ="danger" type="submit"> Delete</Button>
+                                    </div>
+                                </ListGroupItem>
+                    ))}
+                </>
+            ) : (
+                <h4 className="text-center">
+                    No Names
+                </h4>
+            )}
+
+
 
         </ListGroup>
     )

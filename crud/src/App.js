@@ -1,8 +1,8 @@
 import React from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Home from './Components/Home'
-import AddUser from './Components/AddUser'
-import EditUser from './Components/EditUser'
+import Home from './Views/Home'
+import AddName from './Components/AddName'
+import EditName from './Components/EditName'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -12,8 +12,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/add" component={AddUser}  />
-          <Route path="/edit/:id" component={EditUser}  />
+          <Route path="/add" component={AddName}  />
+          <Route path="/edit/:id" component={EditName}  />
         </Switch>
       </Router>
 

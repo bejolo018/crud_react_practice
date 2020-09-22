@@ -1,13 +1,13 @@
 import React from 'react'
 
-const EditUser = () => {
+const NameList = () => {
     return (
         <div>
             <h1>
-            EditUser
+            NameList
             </h1>
         </div>
     )
 }
 
-export default EditUser
+export default NameList

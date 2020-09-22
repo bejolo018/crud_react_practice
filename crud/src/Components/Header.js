@@ -10,7 +10,7 @@ const Header = () => {
                 <NavbarBrand href='/'> Name List</NavbarBrand>
                 <Nav>
                     <NavItem>
-                        <Link className="btn btn-primary" to='/add'>Add User</Link>
+                        <Link className="btn btn-primary" to='/add'>Add Name</Link>
                     </NavItem>
                 </Nav>
             </Container>

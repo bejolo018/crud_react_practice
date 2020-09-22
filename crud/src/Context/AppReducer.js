@@ -1,8 +1,22 @@
 export default (state, action) => {
     switch(action.type){
         case 'ADD_NAME':
-            return{
+            return {
                 names: [action.payload, ...state.names]
+            }
+
+        case 'EDIT_NAME':
+            const updatedName = action.payload
+
+            const updateNames = state.names.map(name => {
+                if(name.id === updatedName.id){
+                    return updatedName
+                }
+                return name;
+            })
+            
+            return {
+                names: updateNames
             }
 
         case 'REMOVE_NAME':

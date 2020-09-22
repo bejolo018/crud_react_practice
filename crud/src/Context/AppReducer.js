@@ -1,6 +1,11 @@
 export default (state, action) => {
     switch(action.type){
-        case 'REMOVE_USER':
+        case 'ADD_NAME':
+            return{
+                names: [action.payload, ...state.names]
+            }
+
+        case 'REMOVE_NAME':
             return {
                 names: state.names.filter( name => {
                     return name.id !== action.payload

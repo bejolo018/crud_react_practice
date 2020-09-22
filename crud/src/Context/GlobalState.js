@@ -20,15 +20,23 @@ export const GlobalProvider = ({children}) => {
     //Actions
     const removeName = (id) => {
         dispatch({
-            type: 'REMOVE_USER',
+            type: 'REMOVE_NAME',
             payload: id
+        })
+    }
+
+    const addName = (user) => {
+        dispatch({
+            type: 'ADD_NAME',
+            payload: user
         })
     }
 
     return(
         <GlobalContext.Provider value={{
             names: state.names,
-            removeName
+            removeName,
+            addName
         }}>
             {children}
         </GlobalContext.Provider>
